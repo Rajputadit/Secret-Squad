@@ -11,16 +11,38 @@
         <h1>SLIET Mentorship Platform</h1>
         <nav>
             <ul>
+                <li><a href="#">Home</a></li>
                 <li><a href="#booking-system">Book a Session</a></li>
                 <li><a href="#faculty-profiles">Faculty Profiles</a></li>
+                <li><a href="#">Notifications <span id="notification-count">0</span></a></li>
                 <li><a href="#communication">Communication</a></li>
             </ul>
         </nav>
     </header>
-
+    <main>
+        <section class="booking-section">
+          <h2>Available Mentorship Slots</h2>
+          <div class="mentor-list">
+            <div class="mentor-card">
+                <h3>Dr. John Doe</h3>
+                <p>Expertise: Data Structures, Algorithms</p>
+                <button class="book-btn" onclick="bookSlot(this)">Book Slot</button>
+              </div>
+              <!-- Mentor 2 Slot -->
+        <div class="mentor-card">
+            <h3>Dr. Jane Smith</h3>
+            <p>Expertise: Web Development, Machine Learning</p>
+            <button class="book-btn" onclick="bookSlot(this)">Book Slot</button>
+          </div>
+          <!-- Add more mentors as needed -->
+        </div>
+          <!-- Add more mentors as needed -->
+          
+      </section>
     <main>
         <section id="booking-system">
             <h2>Automated Booking System</h2>
+            
             <div id="calendar"></div>
             <form id="booking-form">
                 <label for="mentor">Select a Mentor:</label>
@@ -35,12 +57,58 @@
         </section>
 
         <section id="faculty-profiles">
+         
             <h2>Faculty Profiles</h2>
             <div id="profiles"></div>
+            <div class="list-item entry-user sl-user-entry"><div class="member-avatar"><img src="http://sliet.ac.in/wp-content/uploads/avatars/467/66b8bb350cc46-bpfull.jpg" class="avatar user-467-avatar avatar-100 photo" width="100" height="100" alt="Profile Photo"></div><div class="sl-user-info"><div class="user-title"><h4><a href="http://cs.sliet.ac.in/people/amarnath/">Dr. Amar Nath</a></h4></div><div class="sl-user-info-meta"><ul class="sl-user-info-meta-list"><li><span class="sl-user-info-meta-name">Educational Qualification:</span><span class="sl-user-info-meta-value"><strong>Ph.D.</strong> in CSE from <strong>IIT Roorkee</strong>, Sept.<strong> 2020.</strong>
+
+                <strong>Thesis</strong> '<em><strong>A Distributed Approach for Collaborative Task Execution in Dynamic Environment</strong></em>'
+                
+                &nbsp;
+                
+                <strong>M. Tech.</strong> in CSE from <strong>NIT Rourkela</strong>, June <strong>2014.</strong>
+                
+                &nbsp;
+                
+                <strong>B. Tech.</strong> in CSE from&nbsp; <strong>BIET Jhansi</strong>,&nbsp; June <strong>2006.</strong>
+            </span></li><li><span class="sl-user-info-meta-name">Phone (O):</span><span class="sl-user-info-meta-value">01672-253610</span></li><li><span class="sl-user-info-meta-name">e-mail:</span><span class="sl-user-info-meta-value">amarnath@sliet.ac.in</span></li></ul></div></div></div>
+            <div class="sl-user-info">
+                <button class="book-btn" onclick="bookSlot(this)">Book Slot</button>
+                <div class="user-title">
+                    <div class="list-item entry-user sl-user-entry"><div class="member-avatar"><img src="http://sliet.ac.in/wp-content/uploads/avatars/350/666bf221c60a0-bpfull.jpg" class="avatar user-350-avatar avatar-100 photo" width="100" height="100" alt="Profile Photo"></div>
+                    <div class="sl-user-info">
+                        <div class="user-title">
+                            <h4><a href="http://cs.sliet.ac.in/people/rahul/">Rahul Gautam</a></h4>
+                        </div>
+                        <div class="sl-user-info-meta">
+                            <ul class="sl-user-info-meta-list">
+                                <li><span class="sl-user-info-meta-name">Educational Qualification:</span>
+                                    <span class="sl-user-info-meta-value">Ph.D. pursuing,
+
+                        M.Tech (Computer Science and Applications) from Thapar University, Patiala.,
+                        B.Tech(Computer Science and Info. Technology) from Sir Chhotu Ram Inst. of Engg. &amp; Technology, CCS University Campus, Meerut.</span></li><li><span class="sl-user-info-meta-name">Phone (O):</span><span class="sl-user-info-meta-value">+91-1672-25 3612</span></li><li><span class="sl-user-info-meta-name">e-mail:</span><span class="sl-user-info-meta-value">rahulgautam@sliet.ac.in</span></li></ul></div></div></div>
+                    <button class="book-btn" onclick="bookSlot(this)">Book Slot</button>
+                    <div>
+
+                    </div>
+
+                    <div class="list-item entry-user sl-user-entry">
+                        <div class="member-avatar"><img src="http://sliet.ac.in/wp-content/uploads/avatars/349/632d98c75d80f-bpfull.jpg" class="avatar user-349-avatar avatar-100 photo" width="100" height="100" alt="Profile Photo"></div><div class="sl-user-info"><div class="user-title"><h4><a href="http://cs.sliet.ac.in/people/preet/">Dr. Preetpal Kaur Buttar</a></h4></div><div class="sl-user-info-meta"><ul class="sl-user-info-meta-list"><li><span class="sl-user-info-meta-name">Educational Qualification:</span><span class="sl-user-info-meta-value">PhD (Computer Science &amp; Engineering)</span></li>
+                        <li><span class="sl-user-info-meta-name">Phone (O):</span>
+                            <span class="sl-user-info-meta-value">01672-253614</span></li>
+                            <li><span class="sl-user-info-meta-name">e-mail:</span>
+                                <span class="sl-user-info-meta-value">preetpal@sliet.ac.in</span>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="book-btn" onclick="bookSlot(this)">Book Slot</button>
+                </div>
+            </div>
         </section>
 
         <section id="communication">
-            <h2>Communication System</h2>
+            <h2>Communication wth mentor</h2>
             <textarea id="message" placeholder="Write your message here..."></textarea>
             <button id="send-message">Send Message</button>
             <div id="message-status"></div>
