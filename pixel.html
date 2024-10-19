@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLIET Mentorship Platform</title>
+    <link rel="stylesheet" href="pixel.css">
+</head>
+<body>
+    <header>
+        <h1>SLIET Mentorship Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#booking-system">Book a Session</a></li>
+                <li><a href="#faculty-profiles">Faculty Profiles</a></li>
+                <li><a href="#communication">Communication</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="booking-system">
+            <h2>Automated Booking System</h2>
+            <div id="calendar"></div>
+            <form id="booking-form">
+                <label for="mentor">Select a Mentor:</label>
+                <select id="mentor" required></select>
+                <label for="date">Select a Date:</label>
+                <input type="date" id="date" required>
+                <label for="time-slot">Select a Time Slot:</label>
+                <select id="time-slot" required></select>
+                <button type="submit">Book Session</button>
+            </form>
+            <div id="booking-status"></div>
+        </section>
+
+        <section id="faculty-profiles">
+            <h2>Faculty Profiles</h2>
+            <div id="profiles"></div>
+        </section>
+
+        <section id="communication">
+            <h2>Communication System</h2>
+            <textarea id="message" placeholder="Write your message here..."></textarea>
+            <button id="send-message">Send Message</button>
+            <div id="message-status"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 SLIET Mentorship Platform</p>
+    </footer>
+
+    <script src="pixel.js"></script>
+</body>
+</html>
